@@ -126,3 +126,9 @@ button.delete:hover {
   background-color: #c82333;
 
 }
+
+.line{
+  width: 100%;
+  height: 4px;
+  background-color: red;
+}

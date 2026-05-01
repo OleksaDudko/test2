@@ -48,3 +48,21 @@ listEl.addEventListener("click", (event) => {
 function savedData() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(bookArrey));
 }
+
+// ==========================================================
+
+const nameEl = document.querySelector("#username");
+const passwordEl = document.querySelector("#password");
+const saveEl = document.querySelector("#saveBtn");
+
+saveEl.addEventListener("click", (event) => {
+    const localName = localStorage.setItem("login", nameEl.value);
+    const localPassword = localStorage.setItem("password", passwordEl.value);
+    console.log(localName, localPassword);
+})
+
+const savedLogin = localStorage.getItem("login");
+const savedPassword = localStorage.getItem("password");
+
+nameEl.value = savedLogin;
+passwordEl.value = savedPassword
